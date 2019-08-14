@@ -1,10 +1,17 @@
 //Step 3:
-export const otherFeature = item => {
-    return { type: 'OTHER_FEATURE' }
-}
-otherFeature() ;
+export const ADD_FEATURE = 'ADD_FEATURE'
+export const REMOVE_FEATURE = 'REMOVE_FEATURE'
 
-export const addItem = item => {
-    return { type: 'ADD_ITEM' } 
+export const addFeature = (feature) => {
+    return{
+        type: ADD_FEATURE,
+        payload: feature
+    }
 }
-addItem();
+
+export const removeFeature = (feature) => {
+    return {
+        type: REMOVE_FEATURE,
+        payload: feature
+    }
+}
